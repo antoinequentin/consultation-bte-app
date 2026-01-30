@@ -1,0 +1,17 @@
+Package: myshinyapp
+Type: Package
+Title: Consultation BTE - Application Shiny
+Version: 0.1.0
+Author: Your Name
+Maintainer: Your Name <your.email@example.com>
+Description: Application Shiny pour la consultation citoyenne BTE (Boussole de la Transition Écologique).
+    Cette application permet de recueillir les avis des participants sur différents projets
+    via un système de consultation structuré en plusieurs étapes.
+License: MIT
+Encoding: UTF-8
+LazyData: true
+Imports:
+    shiny (>= 1.7.0),
+    dplyr (>= 1.0.0),
+    plotly (>= 4.10.0)
+RoxygenNote: 7.2.3

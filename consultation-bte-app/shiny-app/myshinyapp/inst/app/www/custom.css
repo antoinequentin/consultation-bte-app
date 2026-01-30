@@ -1,0 +1,683 @@
+/* ============================================================================
+   DSFR Custom Styles - Consultation BTE (VERSION OPTIMISÉE)
+   ============================================================================ */
+
+body {
+  font-family: 'Marianne', Arial, sans-serif;
+  background: #f6f6f6;
+}
+
+.main-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.fr-header__brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* ============================================================================
+   Cards
+   ============================================================================ */
+
+.dsfr-card {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom: 2rem;
+}
+
+/* ============================================================================
+   Response Buttons
+   ============================================================================ */
+
+.response-btn {
+  margin: 10px;
+  min-width: 150px;
+  padding: 20px 15px;
+  border: 3px solid #ddd;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: white;
+  text-align: center;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.response-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  border-color: #aaa;
+}
+
+.response-btn.selected {
+  border-color: #000091;
+  background: linear-gradient(135deg, #f5f5fe 0%, #e8e8fd 100%);
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 25px rgba(0,0,145,0.25);
+}
+
+.response-btn-favorable.selected {
+  border-color: #00A95F;
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+}
+
+.response-btn-neutre.selected {
+  border-color: #666666;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+}
+
+.response-btn-defavorable.selected {
+  border-color: #E1000F;
+  background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+}
+
+.response-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 0 auto 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.icon-favorable { 
+  background: linear-gradient(135deg, #00A95F, #009081); 
+}
+
+.icon-neutre { 
+  background: linear-gradient(135deg, #666666, #929292); 
+}
+
+.icon-defavorable { 
+  background: linear-gradient(135deg, #E1000F, #CE614A); 
+}
+
+/* ============================================================================
+   Statistics Cards
+   ============================================================================ */
+
+.stats-card {
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  margin: 10px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.stats-card:hover {
+  transform: translateY(-4px);
+}
+
+.stat-number {
+  font-size: 2.8rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  opacity: 0.95;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ============================================================================
+   Category Badge
+   ============================================================================ */
+
+.categorie-badge {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.question-highlight {
+  position: relative;
+}
+
+/* ============================================================================
+   Progress Bar
+   ============================================================================ */
+
+.progress-bar-custom {
+  height: 12px;
+  background: #e5e5e5;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 20px 0;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #000091, #6A6AF4);
+  transition: width 0.6s ease;
+  box-shadow: 0 0 10px rgba(0,0,145,0.3);
+}
+
+/* ============================================================================
+   DSFR Buttons
+   ============================================================================ */
+
+.fr-btn {
+  background: #000091;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.fr-btn:hover {
+  background: #1212ff;
+}
+
+.fr-btn--secondary {
+  background: white;
+  color: #000091;
+  border: 1px solid #000091;
+}
+
+.fr-btn--secondary:hover {
+  background: #f6f6f6;
+}
+
+.fr-btn--success {
+  background: #00A95F;
+  color: white;
+}
+
+.fr-btn--success:hover {
+  background: #009081;
+}
+
+/* ============================================================================
+   Step Indicator
+   ============================================================================ */
+
+.step-indicator {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+  padding: 0;
+}
+
+.step-item {
+  flex: 1;
+  text-align: center;
+  padding: 15px 10px;
+  position: relative;
+  opacity: 0.4;
+  transition: all 0.3s;
+}
+
+.step-item.active {
+  opacity: 1;
+  background: #f0f0ff;
+  border-radius: 8px;
+}
+
+.step-item.completed {
+  opacity: 0.7;
+}
+
+.step-number {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  background: #ddd;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.step-item.active .step-number {
+  background: #000091;
+  box-shadow: 0 4px 12px rgba(0,0,145,0.3);
+}
+
+.step-item.completed .step-number {
+  background: #00A95F;
+}
+
+/* ============================================================================
+   LOCAL POLIS - SYSTÈME DE CONSULTATION CITOYENNE
+   ============================================================================ */
+
+.local-polis-container {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+
+/* Liste des propositions */
+.statements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+  max-height: 600px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+/* Scrollbar personnalisée */
+.statements-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.statements-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.statements-list::-webkit-scrollbar-thumb {
+  background: #000091;
+  border-radius: 10px;
+}
+
+.statements-list::-webkit-scrollbar-thumb:hover {
+  background: #1212ff;
+}
+
+/* Message "Aucune proposition" */
+.no-statements {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+  background: #f9f9f9;
+  border-radius: 8px;
+  border: 2px dashed #ddd;
+}
+
+/* ============================================================================
+   CARTE DE PROPOSITION
+   ============================================================================ */
+
+.statement-item {
+  background: white;
+  border: 2px solid #e5e5e5;
+  border-radius: 10px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.4s ease;
+}
+
+.statement-item:hover {
+  border-color: #000091;
+  box-shadow: 0 4px 15px rgba(0, 0, 145, 0.1);
+  transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Badge de vote utilisateur */
+.user-vote-badge {
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ============================================================================
+   BOUTONS DE VOTE
+   ============================================================================ */
+
+.vote-btn {
+  flex: 1;
+  min-width: 120px;
+  padding: 12px 20px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.vote-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.vote-btn:active {
+  transform: translateY(0);
+}
+
+/* États actifs avec couleurs et animations */
+.vote-btn.active {
+  font-weight: bold;
+  animation: pulse-vote 0.4s ease;
+}
+
+@keyframes pulse-vote {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Bouton "D'accord" */
+.vote-btn-agree {
+  border-color: #00A95F;
+  color: #00A95F;
+}
+
+.vote-btn-agree:hover {
+  background: #f0fdf4;
+  border-color: #009081;
+}
+
+.vote-btn-agree.active {
+  background-color: #00A95F !important;
+  color: white !important;
+  border-color: #00A95F !important;
+  box-shadow: 0 0 0 3px rgba(0, 169, 95, 0.2);
+}
+
+/* Bouton "Pas d'accord" */
+.vote-btn-disagree {
+  border-color: #E1000F;
+  color: #E1000F;
+}
+
+.vote-btn-disagree:hover {
+  background: #fff5f5;
+  border-color: #CE614A;
+}
+
+.vote-btn-disagree.active {
+  background-color: #E1000F !important;
+  color: white !important;
+  border-color: #E1000F !important;
+  box-shadow: 0 0 0 3px rgba(225, 0, 15, 0.2);
+}
+
+/* Bouton "Passer" */
+.vote-btn-pass {
+  border-color: #929292;
+  color: #666;
+}
+
+.vote-btn-pass:hover {
+  background: #f9f9f9;
+  border-color: #666;
+}
+
+.vote-btn-pass.active {
+  background-color: #666 !important;
+  color: white !important;
+  border-color: #666 !important;
+  box-shadow: 0 0 0 3px rgba(102, 102, 102, 0.2);
+}
+
+/* ============================================================================
+   STATISTIQUES DE VOTES
+   ============================================================================ */
+
+.vote-stats {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 12px 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  flex-wrap: wrap;
+}
+
+.vote-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Score de consensus */
+.consensus-score {
+  margin-left: auto;
+  padding: 5px 12px;
+  background: linear-gradient(135deg, #e8e8fd 0%, #f5f5fe 100%);
+  border-radius: 20px;
+  border: 1px solid #000091;
+}
+
+/* ============================================================================
+   FORMULAIRE NOUVELLE PROPOSITION
+   ============================================================================ */
+
+.new-statement-form {
+  background: #f8f9ff;
+  border: 2px solid #e0e0ff;
+  border-radius: 12px;
+  padding: 25px;
+  margin-top: 25px;
+}
+
+.new-statement-form textarea {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color 0.3s;
+  min-height: 100px;
+}
+
+.new-statement-form textarea:focus {
+  outline: none;
+  border-color: #000091;
+  box-shadow: 0 0 0 3px rgba(0, 0, 145, 0.1);
+}
+
+/* ============================================================================
+   NOTIFICATIONS SHINY
+   ============================================================================ */
+
+.shiny-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  min-width: 250px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  z-index: 10000;
+  animation: slideInRight 0.3s ease;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.shiny-notification-message {
+  background: #00A95F;
+  color: white;
+  border-left: 4px solid #009081;
+}
+
+.shiny-notification-warning {
+  background: #ff9a00;
+  color: white;
+  border-left: 4px solid #cc7a00;
+}
+
+.shiny-notification-error {
+  background: #E1000F;
+  color: white;
+  border-left: 4px solid #b30000;
+}
+
+/* ============================================================================
+   Admin Controls
+   ============================================================================ */
+
+.admin-controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.admin-controls button {
+  flex: 1;
+  min-width: 150px;
+}
+
+/* ============================================================================
+   Utilities
+   ============================================================================ */
+
+.text-center {
+  text-align: center;
+}
+
+/* ============================================================================
+   RESPONSIVE - OPTIMISÉ
+   ============================================================================ */
+
+@media (max-width: 768px) {
+  .main-container {
+    padding: 1rem;
+  }
+  
+  .stats-card {
+    margin: 5px 0;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .response-btn {
+    min-width: 100%;
+    margin: 5px 0;
+  }
+  
+  .admin-controls {
+    flex-direction: column;
+  }
+  
+  .admin-controls button {
+    width: 100%;
+  }
+  
+  .step-indicator {
+    flex-wrap: wrap;
+  }
+  
+  .step-item {
+    flex-basis: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .statements-list {
+    max-height: 400px;
+  }
+  
+  .vote-btn {
+    width: 100%;
+    min-width: auto;
+  }
+  
+  .consensus-score {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .shiny-notification {
+    right: 10px;
+    left: 10px;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .vote-stat-item {
+    font-size: 0.85rem;
+  }
+  
+  .statement-text {
+    font-size: 0.95rem;
+  }
+  
+  .vote-btn {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+/* ============================================================================
+   ACCESSIBILITÉ
+   ============================================================================ */
+
+.vote-btn:focus-visible,
+.new-statement-form button:focus-visible,
+.fr-btn:focus-visible {
+  outline: 3px solid #000091;
+  outline-offset: 2px;
+}
+
+.new-statement-form textarea:focus-visible {
+  outline: 3px solid #000091;
+  outline-offset: 2px;
+}

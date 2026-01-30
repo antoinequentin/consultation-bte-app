@@ -21,13 +21,8 @@ COPY myshinyapp /tmp/myshinyapp
 # Installer le package
 RUN R -e "remotes::install_local('/tmp/myshinyapp', upgrade='never')"
 
-# Créer les répertoires de données
-RUN mkdir -p /srv/shiny-server/app/data
-RUN mkdir -p /srv/shiny-server/app/www
-
-# Copier les fichiers de l'application depuis inst/app
-RUN cp /tmp/myshinyapp/inst/app/* /srv/shiny-server/app/
-RUN cp -r /tmp/myshinyapp/inst/app/www/* /srv/shiny-server/app/www/
+# Copier tous les fichiers de l'application (inclut data/ et www/ automatiquement)
+RUN cp -r /tmp/myshinyapp/inst/app/* /srv/shiny-server/app/
 
 # Nettoyer
 RUN rm -rf /tmp/myshinyapp

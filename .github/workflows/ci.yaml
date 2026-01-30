@@ -42,5 +42,5 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          cache-from: type=registry,ref=VOTRE_USERNAME_DOCKERHUB/toekn-consultation-bte-app:latest
+          cache-from: type=registry,ref=VOTRE_USERNAME_DOCKERHUB/consultation-bte-app:latest
           cache-to: type=inline

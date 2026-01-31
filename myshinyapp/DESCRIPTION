@@ -13,5 +13,6 @@ LazyData: true
 Imports:
     shiny (>= 1.7.0),
     dplyr (>= 1.0.0),
-    plotly (>= 4.10.0)
+    plotly (>= 4.10.0),
+    rlang (>= 1.0.0)
 RoxygenNote: 7.2.3
